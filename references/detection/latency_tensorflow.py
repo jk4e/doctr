@@ -70,7 +70,7 @@ if __name__ == "__main__":
     parser.add_argument("--gpu", dest="gpu", help="Should the benchmark be performed on GPU", action="store_true")
     parser.add_argument("--it", type=int, default=100, help="Number of iterations to run")
     parser.add_argument(
-        "--pretrained", dest="pretrained", help="Use pre-trained models from the modelzoo", action="store_true"
+        "--pretrained", dest="pretrained", help="Use pre-trained models from the modelz oo", action="store_true"
     )
     args = parser.parse_args()
 
