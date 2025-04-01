@@ -41,7 +41,8 @@ def plot_samples(images, targets: list[dict[str, np.ndarray]]) -> None:
     for ax in axes.ravel():
         ax.axis("off")
     plt.show()
-
+    # save the plot
+    plt.savefig('det_samples.png')
 
 def plot_recorder(lr_recorder, loss_recorder, beta: float = 0.95, **kwargs) -> None:
     """Display the results of the LR grid search.

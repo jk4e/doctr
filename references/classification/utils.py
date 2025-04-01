@@ -32,6 +32,8 @@ def plot_samples(images, targets):
     for ax in axes.ravel():
         ax.axis("off")
     plt.show()
+    # save the plot
+    plt.savefig('clas_samples.png')
 
 
 def plot_recorder(lr_recorder, loss_recorder, beta: float = 0.95, **kwargs) -> None:
