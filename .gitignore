@@ -140,3 +140,4 @@ wandb/
 *.index
 
 dataset_dir/
+pretrained/

@@ -40,7 +40,11 @@ python references/detection/train_pytorch.py db_resnet50 --train_path ./dataset_
 ```
 
 ```shell
-python references/detection/train_pytorch.py fast_tiny --train_path ./dataset_dir/output_doctr/train --val_path ./dataset_dir/output_doctr/val --epochs=30 --batch_size=5 --lr=0.0001  --workers=2  --weight-decay=0.01 --pretrained
+python references/detection/train_pytorch.py fast_tiny --train_path ./dataset_dir/output_doctr/train --val_path ./dataset_dir/output_doctr/val --epochs=30 --batch_size=5 --lr=0.0001  --workers=2  --pretrained --input_size=736
+```
+
+```shell
+python references/detection/train_pytorch.py fast_tiny --train_path ./dataset_dir/output_doctr/train --val_path ./dataset_dir/output_doctr/val --epochs=30 --batch_size=5 --lr=0.0001  --workers=2  --pretrained --input_size=736
 ```
 
 

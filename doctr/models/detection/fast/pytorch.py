@@ -22,6 +22,17 @@ from .base import _FAST, FASTPostProcessor
 __all__ = ["FAST", "fast_tiny", "fast_small", "fast_base", "reparameterize"]
 
 
+# default_cfgs: dict[str, dict[str, Any]] = {
+#     "fast_tiny": {
+#         "input_shape": (3, 736, 736),
+#         "mean": (0.798, 0.785, 0.772),
+#         "std": (0.264, 0.2749, 0.287),
+#         "url": "./pretrained/fast_tiny_ic15_736_finetune_ic17mlt.pth",
+#     }
+# }
+
+
+
 default_cfgs: dict[str, dict[str, Any]] = {
     "fast_tiny": {
         "input_shape": (3, 1024, 1024),
@@ -120,7 +131,7 @@ class FAST(_FAST, nn.Module):
         bin_thresh: float = 0.1,
         box_thresh: float = 0.1,
         dropout_prob: float = 0.1,
-        pooling_size: int = 4,  # different from paper performs better on close text-rich images
+        pooling_size: int = 9,  # different from paper performs better on close text-rich images
         assume_straight_pages: bool = True,
         exportable: bool = False,
         cfg: dict[str, Any] = {},
